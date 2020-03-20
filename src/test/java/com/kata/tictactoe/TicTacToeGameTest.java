@@ -23,4 +23,11 @@ public class TicTacToeGameTest {
     public void shouldAssignXWhenFirstMoveIsPlayed(){
         assertEquals('X', ticTacToeGame.getTokenAtPosition(0, 0));
     }
+
+    @Test
+    public void shouldAssignOWhenSecondMoveIsPlayed(){
+        ticTacToeGame.markTokenAt(0,0);
+        ticTacToeGame.markTokenAt(0,1);
+        assertEquals('O', ticTacToeGame.getTokenAtPosition(0,1));
+    }
 }
