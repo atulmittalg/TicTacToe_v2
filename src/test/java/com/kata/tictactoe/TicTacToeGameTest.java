@@ -47,4 +47,18 @@ public class TicTacToeGameTest {
         ticTacToeGame.markTokenAt(0,2);
         ticTacToeGame.markTokenAt(0,2);
     }
+
+    @Test
+    public void shouldAssignXWhenNinthMoveIsPlayed(){
+        ticTacToeGame.markTokenAt(0,0);
+        ticTacToeGame.markTokenAt(0,1);
+        ticTacToeGame.markTokenAt(0,2);
+        ticTacToeGame.markTokenAt(1,0);
+        ticTacToeGame.markTokenAt(1,1);
+        ticTacToeGame.markTokenAt(1,2);
+        ticTacToeGame.markTokenAt(2,0);
+        ticTacToeGame.markTokenAt(2,1);
+        ticTacToeGame.markTokenAt(2,2);
+        assertEquals('X', ticTacToeGame.getTokenAtPosition(2,2));
+    }
 }
