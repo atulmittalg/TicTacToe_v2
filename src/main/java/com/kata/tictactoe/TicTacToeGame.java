@@ -5,8 +5,7 @@ public class TicTacToeGame {
     private char currentTokenToPlay = 'X';
 
     public char getTokenAtPosition(final int positionX, final int positionY) {
-        if(gameboardLayout[positionX][positionY] == 'O'){return 'O';}
-        return 'X';
+        return gameboardLayout[positionX][positionY];
     }
 
     public void markTokenAt(final int positionX, final int positionY) {
