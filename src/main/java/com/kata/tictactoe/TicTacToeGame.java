@@ -11,7 +11,10 @@ public class TicTacToeGame {
 
     public void markTokenAt(final int positionX, final int positionY) {
         gameboardLayout[positionX][positionY] = currentTokenToPlay;
-        if(currentTokenToPlay == 'X'){currentTokenToPlay = 'O';}
-        else {currentTokenToPlay = 'X';}
+        changeCurrentPlayerTokenForNextTurn();
+    }
+
+    private void changeCurrentPlayerTokenForNextTurn() {
+        currentTokenToPlay = currentTokenToPlay == 'X' ? 'O' : 'X';
     }
 }
