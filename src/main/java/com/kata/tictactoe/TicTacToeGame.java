@@ -9,6 +9,7 @@ public class TicTacToeGame {
     }
 
     public void markTokenAt(final int positionX, final int positionY) {
+        if (gameboardLayout[positionX][positionY] != 0) {throw new RuntimeException("Position Already Filled");}
         gameboardLayout[positionX][positionY] = currentTokenToPlay;
         changeCurrentPlayerTokenForNextTurn();
     }

@@ -39,4 +39,12 @@ public class TicTacToeGameTest {
         ticTacToeGame.markTokenAt(0,2);
         assertEquals('X', ticTacToeGame.getTokenAtPosition(0,2));
     }
+
+    @Test(expected = RuntimeException.class)
+    public void shouldThrowPositionAlreadyFilledExceptionWhenPlayingAtAUsedPosition(){
+        ticTacToeGame.markTokenAt(0,0);
+        ticTacToeGame.markTokenAt(0,1);
+        ticTacToeGame.markTokenAt(0,2);
+        ticTacToeGame.markTokenAt(0,2);
+    }
 }
